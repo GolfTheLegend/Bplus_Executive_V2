@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "clean": "cd android && ./gradlew clean",
     "axp": "cd android && ./gradlew app:assembleRelease",
-    "ainstall": "cd android/app/build/outputs/apk/release && adb install app-release.apk"
+    "ainstall": "cd android/app/build/outputs/apk/release && adb install app-release.apk",
+    "oxc": "cd ios && open Bplus_Executive_V2.xcworkspace"
   },
   "dependencies": {
     "@blacksakura013/th-datepicker": "^1.0.16",
@@ -52,7 +53,7 @@
     "react-native-navigation-drawer-layout": "^0.0.7",
     "react-native-network-info": "^5.2.1",
     "react-native-paper": "^4.9.2",
-    "react-native-permissions": "^3.1.0",
+    "react-native-permissions": "^3.8.0",
     "react-native-qr-decode-image-camera": "^1.0.6",
     "react-native-qrcode-scanner": "^1.5.4",
     "react-native-reanimated": "1.13.2",
