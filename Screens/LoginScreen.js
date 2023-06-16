@@ -50,6 +50,8 @@ import * as activityActions from '../src/actions/activityActions';
 
 import Colors from '../src/Colors';
 import { fontSize, fontWeight } from 'styled-system';
+import { get } from 'https';
+import { getDeviceUniqeId } from './menus/helper';
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
@@ -102,13 +104,13 @@ const LoginScreen = () => {
     if (serviceID != loginReducer.serviceID)
       dispatch(loginActions.serviceID(serviceID))
 
-    console.log('>> isSFeatures : ', isSFeatures)
-    if (registerReducer.machineNum.length == 0)
-      getMac()
-
-    console.log('>> Language : ', Language.getLang())
-
-  }, []);
+      console.log('>> isSFeatures : ', isSFeatures)
+      if (registerReducer.machineNum.length == 0)
+        getMac()
+  
+      console.log('>> Language : ', Language.getLang())
+  
+    }, []);
   useEffect(() => {
     if (!databaseReducer.Data.urlser && !loading_backG)
       Alert.alert(
@@ -137,26 +139,15 @@ const LoginScreen = () => {
       secureTextEntry: !data.secureTextEntry,
     });
   };
+
+  
   const getMac = async () => {
     var lodstr = ''
     for (var i = 0; i < 100; i++) {
       lodstr += '_'
-
-
     }
-
-
-    await DeviceInfo.getMacAddress().then((mac) => {
-      var a = Math.floor(100000 + Math.random() * 900000);
-      console.log(DeviceInfo.getDeviceName())
-      console.log('\nmachine > > ' + mac)
-      if (mac.length > 0) dispatch(registerActions.machine(mac));
-      else NetworkInfo.getBSSID().then(macwifi => {
-        console.log('\nmachine(wifi) > > ' + macwifi)
-        if (macwifi.length > 0) dispatch(registerActions.machine(macwifi));
-        else dispatch(registerActions.machine('9b911981-afbf-42d4-9828-0924a112d48e'));
-      }).catch((e) => dispatch(registerActions.machine('9b911981-afbf-42d4-9828-0924a112d48e')));
-    }).catch((e) => dispatch(registerActions.machine('9b911981-afbf-42d4-9828-0924a112d48e')));
+    const macAD = await getDeviceUniqeId();
+        dispatch(registerActions.machine(macAD));
   }
 
 

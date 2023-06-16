@@ -52,13 +52,13 @@ import * as safe_Format from '../../../src/safe_Format';
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 import tableStyles from '../tableStyles'
-const showAR = ({ route }) => {
+const ShowAR = ({ route }) => {
     const dispatch = useDispatch();
     let arrayResult = [];
 
     const navigation = useNavigation();
     const {
-        container2,
+        container2, 
         container,
         button,
         textButton,
@@ -453,4 +453,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default showAR;
+export default ShowAR;
