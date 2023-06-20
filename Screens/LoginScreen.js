@@ -105,7 +105,7 @@ const LoginScreen = () => {
       dispatch(loginActions.serviceID(serviceID))
 
       console.log('>> isSFeatures : ', isSFeatures)
-      if (registerReducer.machineNum.length)
+      if (registerReducer.machineNum.length >= 0)
         getMac()
   
       console.log('>> Language : ', Language.getLang())
