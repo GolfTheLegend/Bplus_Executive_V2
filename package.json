@@ -11,7 +11,9 @@
     "clean": "cd android && ./gradlew clean",
     "axp": "cd android && ./gradlew app:assembleRelease",
     "ainstall": "cd android/app/build/outputs/apk/release && adb install app-release.apk",
-    "oxc": "cd ios && open Bplus_Executive_V2.xcworkspace"
+    "oxc": "cd ios && open Bplus_Executive_V2.xcworkspace",
+    "postinstall": "react-native setup-ios-permissions && pod-install && patch-package",
+    "reactNativePermissionsIOS": ["Camera"]
   },
   "dependencies": {
     "@blacksakura013/th-datepicker": "^1.0.16",
@@ -55,7 +57,7 @@
     "react-native-paper": "^4.9.2",
     "react-native-permissions": "^3.8.0",
     "react-native-qr-decode-image-camera": "^1.0.6",
-    "react-native-qrcode-scanner": "^1.5.4",
+    "react-native-qrcode-scanner": "^1.5.5",
     "react-native-reanimated": "1.13.2",
     "react-native-responsive-screen": "^1.4.2",
     "react-native-restart": "^0.0.22",
