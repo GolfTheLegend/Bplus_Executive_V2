@@ -486,7 +486,7 @@ const LoginScreen = () => {
                         flexDirection: 'column',
                         alignItems: 'center'
                       }}>
-                      <Text style={Colors.borderColor}>version 2.5.7</Text>
+                      <Text style={Colors.borderColor}>version 2.5.8</Text>
                     </View>
 
                   </View>
