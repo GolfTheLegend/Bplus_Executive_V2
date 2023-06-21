@@ -192,6 +192,7 @@ const OrderScreen = () => {
                                             marginLeft: 10,
                                             color: Colors.fontColor,
                                             fontSize: FontSize.medium,
+                                            padding:Platform.OS === 'ios' ? 15 :undefined,
                                         }}
                                         value={textsearch}
                                         onChangeText={(val) => setSearch(val)}
