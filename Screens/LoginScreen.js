@@ -258,12 +258,12 @@ const LoginScreen = () => {
         if (json && json.ResponseCode == '635') {
           Alert.alert(
             Language.t('alert.errorTitle'),
-            Language.t('alert.errorDetail'), [{ text: Language.t('alert.ok'), onPress: () => dispatch(loginActions.guid([])) }]);
+            Language.t('error_ser.609'), [{ text: Language.t('alert.ok'), onPress: () => dispatch(loginActions.guid([])) }]);
           console.log('NOT FOUND MEMBER');
         } else if (json && json.ResponseCode == '629') {
           Alert.alert(
             Language.t('alert.errorTitle'),
-            'Function Parameter Required', [{ text: Language.t('alert.ok'), onPress: () => dispatch(loginActions.guid([])) }]);
+            Language.t('error_ser.609'), [{ text: Language.t('alert.ok'), onPress: () => dispatch(loginActions.guid([])) }]);
         } else if (json && json.ResponseCode == '200') {
           let responseData = JSON.parse(json.ResponseData)
           dispatch(loginActions.guid(responseData.BPAPUS_GUID))

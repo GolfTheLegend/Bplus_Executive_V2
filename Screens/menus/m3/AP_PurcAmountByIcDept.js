@@ -328,8 +328,8 @@ const AP_PurcAmountByIcDept = ({ route }) => {
                             onRequestClose={() => {
                                 setModalVisible(!modalVisible);
                             }}>
-                            < TouchableOpacity
-                                onPress={() => setModalVisible(!modalVisible)}
+                            < View
+                                // onPress={() => setModalVisible(!modalVisible)}
                                 style={styles.centeredView}>
                                 <View>
                                     <View style={styles.modalView}>
@@ -340,7 +340,7 @@ const AP_PurcAmountByIcDept = ({ route }) => {
                                             <View width={20}></View>
                                             <Text style={styles.modalText}>เลือกการค้นหา</Text>
                                             <Pressable style={{ alignItems: 'flex-end' }} onPress={() => setModalVisible(!modalVisible)}>
-                                                <FontAwesome name="close" color={Colors.backgroundColor} size={FontSize.large} />
+                                                <FontAwesome name="close" color={Colors.backgroundColor} size={30} />
                                             </Pressable>
                                         </View>
                                         <View style={{ backgroundColor: Colors.fontColor2, borderRadius: 20, padding: 10 }}>
@@ -439,7 +439,7 @@ const AP_PurcAmountByIcDept = ({ route }) => {
                                         </View>
                                     </View>
                                 </View>
-                            </TouchableOpacity>
+                            </View>
                         </Modal>
                     </View>
 
