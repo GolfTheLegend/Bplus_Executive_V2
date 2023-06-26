@@ -86,7 +86,7 @@ const ScanScreen = ({ navigation, route }) => {
         console.log('response.error');
       } else {
         let path = null;
-        if (Platform.OS == 'android') {
+        if (Platform.OS == 'android' || Platform.OS == 'ios') {
           path = response.assets[0].path;
           if (!path) {
             path = response.assets[0].uri;
