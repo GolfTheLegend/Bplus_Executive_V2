@@ -18,6 +18,9 @@ import { Language } from '../translations/I18n';
 import { QRreader } from 'react-native-qr-decode-image-camera';
 import { Base64 } from '../src/safe_Format';
 const ScanScreen = ({ navigation, route }) => {
+
+  const [isLoading, setIsLoading] = useState(false)
+
   let checkAndroidPermission = true
   useEffect(() => {
     console.log(route.params)
@@ -28,19 +31,32 @@ const ScanScreen = ({ navigation, route }) => {
     console.log(route.params, ' code: ', a)
   }, [])
 
-  if (Platform.OS === 'android' && Platform.Version < 23) {
+  if (Platform.OS === 'android' && Platform.Version < 23 || Platform.OS === 'ios') {
     checkAndroidPermission = false
   }
   const onSuccess = (e) => {
+    if(isLoading){
+      return
+    }
+
+    setIsLoading(true)
 
     if (e && e.type != 'QR_CODE' && e.type != 'org.iso.QRCode') {
-      Alert.alert(Language.t('alert.errorTitle'), Language.t('selectBase.notfound'), [{ text: Language.t('alert.ok'), onPress: () => console.log('OK Pressed') }]);
+      Alert.alert(Language.t('alert.errorTitle'), Language.t('selectBase.notfound'), [{ 
+        text: Language.t('alert.ok'), onPress: () => {
+        console.log('OK Pressed') 
+        setIsLoading(false)}
+      }]);
     } else {
       if (e && e.data) {
         let result = Base64.decode(Base64.decode(e.data)).split('|')
 
         if (result[0].indexOf('.dll') == -1) {
-          Alert.alert(Language.t('alert.errorTitle'), Language.t('selectBase.invalid'), [{ text: Language.t('alert.ok'), onPress: () => console.log('OK Pressed') }]);
+          Alert.alert(Language.t('alert.errorTitle'), Language.t('selectBase.invalid'), [{ 
+            text: Language.t('alert.ok'), onPress: () => {
+            console.log('OK Pressed')
+            setIsLoading(false)
+          }}]);
         } else {
           let tempurl = result[0].split('.dll')
           let serurl = tempurl[0] + '.dll'
@@ -49,6 +65,7 @@ const ScanScreen = ({ navigation, route }) => {
           for (var s in tempnmae) if (tempnmae[s].search('.dll') > -1) urlnmae = tempnmae[s].split('.dll')
           let newObj = { label: serurl, value: urlnmae[0] };
           navigation.navigate(route.params.route, { post: newObj, data: a });
+          setIsLoading(false)
         }
       }
     }
