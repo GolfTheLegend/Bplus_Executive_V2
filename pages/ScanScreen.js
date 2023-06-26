@@ -133,6 +133,7 @@ const ScanScreen = ({ navigation, route }) => {
       fadeIn={true}
       reactivate={true}
       showMarker={true}
+      vibrate={!isLoading}
       topContent={
 
         <View
