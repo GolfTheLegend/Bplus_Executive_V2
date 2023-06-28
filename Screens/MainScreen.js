@@ -408,7 +408,7 @@ const MainScreen = () => {
                           alignSelf: 'center',
                           fontSize: FontSize.medium,
                           fontWeight: 'bold'
-                        }}>สอบถามข้อมูลการซื้อ</Text>
+                        }}>ข้อมูลประกอบการสั่งซื้อ</Text>
                       </View>
                     </View>
                   </TouchableOpacity>

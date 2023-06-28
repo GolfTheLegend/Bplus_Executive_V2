@@ -225,7 +225,7 @@ const OrderScreen = () => {
                                             return (
                                                 <TouchableNativeFeedback onPress={() => navigation.navigate('OrderInformation',
                                                     {
-                                                        header: 'สอบถามข้อมูลการสั่งซื้อ',
+                                                        header: 'ข้อมูลประกอบการสั่งซื้อ',
                                                         data: item
                                                     })}>
 
