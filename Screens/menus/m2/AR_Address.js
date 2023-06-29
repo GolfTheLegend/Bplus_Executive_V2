@@ -25,7 +25,7 @@ import {
     TouchableNativeFeedback,
 } from 'react-native-gesture-handler';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 
 import { useStateIfMounted } from 'use-state-if-mounted';
@@ -57,6 +57,7 @@ const AR_GoodsBooking = ({ route }) => {
     let arrayResult = [];
 
     const navigation = useNavigation();
+    const insets = useSafeAreaInsets()
     const {
         container2,
         container,
@@ -198,9 +199,9 @@ const AR_GoodsBooking = ({ route }) => {
 
     return (
         <>
-            <SafeAreaView style={container}>
+            <View style={container}>
                 <StatusBar hidden={true} />
-                <View style={tabbar}>
+                <View style={[tabbar,{paddingTop:insets.top,height:50 +insets.top}]}>
 
                     <View style={{ flexDirection: 'row', }}>
                         <TouchableOpacity
@@ -267,7 +268,7 @@ const AR_GoodsBooking = ({ route }) => {
 
                 </View>
 
-            </SafeAreaView>
+            </View>
 
             {loading && (
                 <View

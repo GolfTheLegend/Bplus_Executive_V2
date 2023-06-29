@@ -111,7 +111,7 @@ const M5 = () => {
 
     return (
 
-        <SafeAreaView style={container1}>
+        <View style={container1}>
             <StatusBar hidden={true} />
             <ImageBackground source={require(image)} onLoadEnd={() => { setLoading_backG(false) }} resizeMode="cover" style={styles.image}>
                 {!loading_backG ?
@@ -345,7 +345,7 @@ const M5 = () => {
                 )}
 
             </ImageBackground>
-        </SafeAreaView>
+        </View>
     );
 };
 

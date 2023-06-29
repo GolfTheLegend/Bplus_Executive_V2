@@ -129,7 +129,7 @@ const App = () => {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
-          <SafeAreaView style={{ flex: 1 }}>
+          <View style={{ flex: 1 }}>
             <MainStack.Navigator>
               <MainStack.Screen
                 options={{ headerShown: false }}
@@ -382,7 +382,7 @@ const App = () => {
               />
 
             </MainStack.Navigator>
-          </SafeAreaView>
+          </View>
         </NavigationContainer>
       </PersistGate>
     </Provider>
