@@ -797,14 +797,10 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blacksakura013/th-datepicker@^1.0.18":
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@blacksakura013/th-datepicker/-/th-datepicker-1.0.18.tgz#800468bbb9991ad628025a658e154724f9b6df8e"
-  integrity sha512-8wFgKJnaKFZZ9W58BAJS4VD67S0sff4HJF1bqIdp3UPkJ8DYXXYUZ1lQaKkBtMYGS9jW6VwNPqnk8peoAy0HxQ==
-  dependencies:
-    "@wavedph/react-native-picker-with-modal" "^0.4.1"
-    react-native-localize "^3.0.1"
-    react-native-responsive-screen "^1.4.2"
+"@blacksakura013/th-datepicker@^1.0.16":
+  version "1.0.16"
+  resolved "https://registry.npmjs.org/@blacksakura013/th-datepicker/-/th-datepicker-1.0.16.tgz"
+  integrity sha512-kE1QLXTgw1pihyTg5ud3l67xEXTIgYcLf5nDbJM2yZelhWa/UXS+zg14EeDhEUQvVDqAQvABaCb0CKHebjYstA==
 
 "@callstack/react-theme-provider@^3.0.7":
   version "3.0.7"
@@ -914,11 +910,6 @@
   dependencies:
     humps "^2.0.1"
     prop-types "^15.7.2"
-
-"@freakycoder/react-native-bounceable@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@freakycoder/react-native-bounceable/-/react-native-bounceable-1.0.3.tgz#79de6fa99fb8357a5e52cc095ecdb1786f4b1514"
-  integrity sha512-+iMq2tnqxCwFjitbPUz9nZ+VfJ8OU9waIlDJAAsoq1229QEwCmERCNy5zVtDsz75q3i4FLXX/n7fimdMzmP21A==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -1882,15 +1873,6 @@
   dependencies:
     "@typescript-eslint/types" "5.33.0"
     eslint-visitor-keys "^3.3.0"
-
-"@wavedph/react-native-picker-with-modal@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@wavedph/react-native-picker-with-modal/-/react-native-picker-with-modal-0.4.1.tgz#346c25a31f8444a3c7756b5d4a35476decdcc927"
-  integrity sha512-UuOXPFvtnaRwapU28nPYJUpZUhDQ7p9aO21FjztUjCH9fq4mMzXlJRFokfB6W+AGNZw+Z5BlH3Uz6FoVz3QTKg==
-  dependencies:
-    "@freakycoder/react-native-bounceable" "^1.0.3"
-    react-native-responsive-screen "^1.4.2"
-    react-native-svg "^13.9.0"
 
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.6"
@@ -7413,11 +7395,6 @@ react-native-localize@^2.2.2:
   version "2.2.2"
   resolved "https://registry.npmjs.org/react-native-localize/-/react-native-localize-2.2.2.tgz"
   integrity sha512-j9aAYyuZblq27XPW3h/cZuBP2WA1OOsEPjTHszPQ/YcM9VrrrYnfpJObP4IyghxmS8i+7Jhoh7qp8CjunfrFjw==
-
-react-native-localize@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-3.0.1.tgz#2eeca15e8c15fb6a2816d84e6c1186c81e93932f"
-  integrity sha512-jJOTciBbzYjGcbLhzM4slYg2rlpSJaXP/jkNPp5LHXXCYHQMxFAyzqXcXsdJ/vFINsZa3sHpEGvw3x/tfzprbA==
 
 react-native-material-letter-icon@0.0.3:
   version "0.0.3"

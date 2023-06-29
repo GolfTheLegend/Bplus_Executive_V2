@@ -13,12 +13,10 @@
     "ainstall": "cd android/app/build/outputs/apk/release && adb install app-release.apk",
     "oxc": "cd ios && open Bplus_Executive_V2.xcworkspace",
     "postinstall": "react-native setup-ios-permissions && pod-install && patch-package",
-    "reactNativePermissionsIOS": [
-      "Camera"
-    ]
+    "reactNativePermissionsIOS": ["Camera"]
   },
   "dependencies": {
-    "@blacksakura013/th-datepicker": "^1.0.18",
+    "@blacksakura013/th-datepicker": "^1.0.16",
     "@eabdullazyanov/react-native-sms-user-consent": "^1.0.10",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

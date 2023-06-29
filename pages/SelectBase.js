@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 import { Picker, } from 'native-base';
 import { useStateIfMounted } from 'use-state-if-mounted';
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import RNRestart from 'react-native-restart';
 
 import { connect } from 'react-redux';
@@ -70,7 +70,6 @@ const SelectBase = ({ route }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState(loginReducer.ipAddress.length > 0 ? loginReducer.ipAddress : '');
-  const insets = useSafeAreaInsets()
   const [data, setData] = useStateIfMounted({
     secureTextEntry: true,
   });
@@ -419,7 +418,7 @@ const SelectBase = ({ route }) => {
   return (
     <View style={container1}>
       <ImageBackground source={require(image)} onLoadEnd={() => { setLoading_backG(false) }} resizeMode="cover" style={styles.image}>
-        <View style={[tabbar,{paddingTop:insets.top,height:50 +insets.top}]}>
+        <View style={tabbar}>
           <View style={{ flexDirection: 'row' }}>
             <TouchableOpacity
               onPress={() => navigation.goBack()}>
@@ -445,7 +444,7 @@ const SelectBase = ({ route }) => {
         </View>
 
         <ScrollView>
-          <View >
+          <SafeAreaView >
             <KeyboardAvoidingView keyboardVerticalOffset={1} behavior={'position'}>
               <View style={styles.body}>
                 <View style={styles.body1}>
@@ -799,7 +798,7 @@ const SelectBase = ({ route }) => {
 
             </KeyboardAvoidingView>
 
-          </View>
+          </SafeAreaView>
         </ScrollView>
 
 
@@ -856,7 +855,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   tabbar: {
-   
+    height: 70,
     padding: 12,
     paddingLeft: 20,
     alignItems: 'center',

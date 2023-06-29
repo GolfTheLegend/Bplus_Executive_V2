@@ -17,11 +17,9 @@ import { Language } from '../translations/I18n';
 
 import { QRreader } from 'react-native-qr-decode-image-camera';
 import { Base64 } from '../src/safe_Format';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 const ScanScreen = ({ navigation, route }) => {
 
   const [isLoading, setIsLoading] = useState(false)
-  const insets = useSafeAreaInsets()
 
   let checkAndroidPermission = true
   useEffect(() => {
@@ -144,8 +142,6 @@ const ScanScreen = ({ navigation, route }) => {
             flexDirection: 'row',
             padding: 10,
             flex: 1,
-            paddingTop:insets.top,
-            height:60 +insets.top
           }}>
 
           <TouchableOpacity

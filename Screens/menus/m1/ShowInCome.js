@@ -23,7 +23,7 @@ import {
     ScrollView,
     TouchableNativeFeedback,
 } from 'react-native-gesture-handler';
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useStateIfMounted } from 'use-state-if-mounted';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
@@ -48,7 +48,6 @@ const ShowInCome = ({ route }) => {
     let arrayResult = [];
     const dispatch = useDispatch();
     const navigation = useNavigation();
-    const insets = useSafeAreaInsets()
     const {
         container2,
         container,
@@ -214,9 +213,9 @@ const ShowInCome = ({ route }) => {
 
     return (
         <>
-            <View style={container}>
+            <SafeAreaView style={container}>
                 <StatusBar hidden={true} />
-                <View style={[tableStyles.tabbar,{paddingTop:insets.top,height:50 +insets.top}]}>
+                <View style={tableStyles.tabbar}>
                     <View style={{ flexDirection: 'row', }}>
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}>
@@ -287,7 +286,7 @@ const ShowInCome = ({ route }) => {
                                             </View>
                                         </TouchableNativeFeedback>
                                     </KeyboardAvoidingView>
-                                    {arrayObj.length > 0 ? <View style={[tableStyles.tableHeader,{marginBottom: Platform.OS === 'ios'? 80:0}]}>
+                                    {arrayObj.length > 0 ? <View style={tableStyles.tableHeader}>
                                         <View width={deviceWidth * 0.2} style={tableStyles.tableHeaderTitle}  ><Text style={{
                                             fontSize: FontSize.medium,
                                             color: Colors.fontColor2,
@@ -437,7 +436,7 @@ const ShowInCome = ({ route }) => {
 
                     </View>
                 </View>
-            </View>
+            </SafeAreaView>
 
             {loading && (
                 <View

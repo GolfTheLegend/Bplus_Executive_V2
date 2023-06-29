@@ -25,7 +25,7 @@ import {
     TouchableNativeFeedback,
 } from 'react-native-gesture-handler';
 
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useStateIfMounted } from 'use-state-if-mounted';
 
@@ -57,7 +57,6 @@ const AP_PurcAmount = ({ route }) => {
     let arrayResult = [];
 
     const navigation = useNavigation();
-    const insets = useSafeAreaInsets()
     const {
         container2,
         container,
@@ -225,9 +224,9 @@ const AP_PurcAmount = ({ route }) => {
 
     return (
         <>
-            <View style={container}>
+            <SafeAreaView style={container}>
                 <StatusBar hidden={true} />
-                <View style={[tableStyles.tabbar,{paddingTop:insets.top,height:50 +insets.top}]}>
+                <View style={tableStyles.tabbar}>
                     <View style={{ flexDirection: 'row', }}>
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}>
@@ -450,7 +449,7 @@ const AP_PurcAmount = ({ route }) => {
 
 
 
-            </View>
+            </SafeAreaView>
 
             {loading && (
                 <View

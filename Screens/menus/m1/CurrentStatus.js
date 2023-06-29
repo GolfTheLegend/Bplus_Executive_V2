@@ -25,7 +25,7 @@ import {
     TouchableNativeFeedback,
 } from 'react-native-gesture-handler';
 
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 import { useStateIfMounted } from 'use-state-if-mounted';
@@ -58,7 +58,6 @@ const CurrentStatus = ({ route }) => {
     let arrayResult = [];
 
     const navigation = useNavigation();
-    const insets = useSafeAreaInsets()
     const {
         container2,
         container,
@@ -250,9 +249,9 @@ const CurrentStatus = ({ route }) => {
 
     return (
         <>
-            <View style={container}>
+            <SafeAreaView style={container}>
                 <StatusBar hidden={true} />
-                <View style={[tableStyles.tabbar,{paddingTop:insets.top,height:50 +insets.top}]}>
+                <View style={tableStyles.tabbar}>
                     <View style={{ flexDirection: 'row', }}>
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}>
@@ -337,7 +336,7 @@ const CurrentStatus = ({ route }) => {
                             </KeyboardAvoidingView>
                             {arrayObj.length > 0 ?
                          
-                         <View style={[tableStyles.tableHeader,{marginBottom: Platform.OS === 'ios'? 80:0}]}>
+                         <View style={tableStyles.tableHeader}>
                          <View width={deviceWidth * 0.4} style={tableStyles.tableHeaderTitle}  ><Text style={{
                              fontSize: FontSize.medium,
                              color: Colors.fontColor2,
@@ -458,7 +457,7 @@ const CurrentStatus = ({ route }) => {
                     </Modal>
                 </View>
 
-            </View>
+            </SafeAreaView>
 
             {loading && (
                 <View

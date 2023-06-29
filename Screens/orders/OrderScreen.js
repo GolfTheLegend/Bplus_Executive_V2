@@ -166,7 +166,7 @@ const OrderScreen = () => {
 
     return (
 
-        <View style={container1}>
+        <SafeAreaView style={container1}>
             <StatusBar hidden={true} />
             <ImageBackground source={require(image)} onLoadEnd={() => { setLoading_backG(false) }} resizeMode="cover" style={styles.image}>
                 {!loading_backG ?
@@ -283,7 +283,6 @@ const OrderScreen = () => {
                                 <View
                                     style={{
                                         margin: 10,
-                                        marginBottom:50,
                                         borderRadius: 20,
                                         flexDirection: 'column',
                                         padding: 10,
@@ -344,7 +343,7 @@ const OrderScreen = () => {
                 )}
 
             </ImageBackground>
-        </View>
+        </SafeAreaView>
     );
 };
 

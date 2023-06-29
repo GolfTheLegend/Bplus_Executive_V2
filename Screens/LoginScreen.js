@@ -25,7 +25,7 @@ import { NetworkInfo } from "react-native-network-info";
 
 
 
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 import { useStateIfMounted } from 'use-state-if-mounted';
@@ -64,7 +64,6 @@ const LoginScreen = () => {
   const registerReducer = useSelector(({ registerReducer }) => registerReducer);
   const loginReducer = useSelector(({ loginReducer }) => loginReducer);
   const databaseReducer = useSelector(({ databaseReducer }) => databaseReducer);
-  const insets = useSafeAreaInsets()
   const {
     container2,
     container1,
@@ -305,7 +304,7 @@ const LoginScreen = () => {
 
   return (
 
-    <View style={container1}>
+    <SafeAreaView style={container1}>
       <StatusBar hidden={true} />
       <ImageBackground source={require(image)} onLoadEnd={async () => {
         setLoading_backG(false)
@@ -316,7 +315,7 @@ const LoginScreen = () => {
       }} resizeMode="cover" style={styles.image}>
         {!loading_backG ?
           <ScrollView>
-            <View style={[tabbar,{paddingTop:insets.top,height:70+insets.top}]}>
+            <View style={tabbar}>
               <TouchableOpacity
                 onPress={() => navigation.navigate('SelectScreen', { data: '' })}>
                 <FontAwesomeIcon name="gear" size={30} color={Colors.backgroundLoginColorSecondary} />
@@ -532,7 +531,7 @@ const LoginScreen = () => {
           </View>
         )}
       </ImageBackground>
-    </View>
+    </SafeAreaView>
   );
 };
 
