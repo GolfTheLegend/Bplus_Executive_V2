@@ -797,12 +797,21 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+<<<<<<< Updated upstream
 "@blacksakura013/th-datepicker@^1.0.18":
   version "1.0.18"
   resolved "https://registry.yarnpkg.com/@blacksakura013/th-datepicker/-/th-datepicker-1.0.18.tgz#800468bbb9991ad628025a658e154724f9b6df8e"
   integrity sha512-8wFgKJnaKFZZ9W58BAJS4VD67S0sff4HJF1bqIdp3UPkJ8DYXXYUZ1lQaKkBtMYGS9jW6VwNPqnk8peoAy0HxQ==
   dependencies:
     "@wavedph/react-native-picker-with-modal" "^0.4.1"
+=======
+"@blacksakura013/th-datepicker@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@blacksakura013/th-datepicker/-/th-datepicker-1.0.17.tgz#a30754929b033efe64b1e4599c483df74e8c0638"
+  integrity sha512-h2AVsSgkJiik/koA3EWSmgE116MEduO2phfp6uLtOTQ07EgZ6k+i18i62s/SsIcWbt02VKk+HC8zbAHirqsTeg==
+  dependencies:
+    "@wavedph/react-native-picker-with-modal" "^0.4.0"
+>>>>>>> Stashed changes
     react-native-localize "^3.0.1"
     react-native-responsive-screen "^1.4.2"
 
@@ -1883,10 +1892,17 @@
     "@typescript-eslint/types" "5.33.0"
     eslint-visitor-keys "^3.3.0"
 
+<<<<<<< Updated upstream
 "@wavedph/react-native-picker-with-modal@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@wavedph/react-native-picker-with-modal/-/react-native-picker-with-modal-0.4.1.tgz#346c25a31f8444a3c7756b5d4a35476decdcc927"
   integrity sha512-UuOXPFvtnaRwapU28nPYJUpZUhDQ7p9aO21FjztUjCH9fq4mMzXlJRFokfB6W+AGNZw+Z5BlH3Uz6FoVz3QTKg==
+=======
+"@wavedph/react-native-picker-with-modal@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@wavedph/react-native-picker-with-modal/-/react-native-picker-with-modal-0.4.0.tgz#30d03b55d2df0d339271ac1a324de0b84a7b123c"
+  integrity sha512-nehGOCyonTAHGvRJsQDA5KBAtt+W7ExMUWj3gex0mKIxDSaDkOQCotFuVDYB5zgr9wnCd2alo3m7fuH/cjgCvQ==
+>>>>>>> Stashed changes
   dependencies:
     "@freakycoder/react-native-bounceable" "^1.0.3"
     react-native-responsive-screen "^1.4.2"

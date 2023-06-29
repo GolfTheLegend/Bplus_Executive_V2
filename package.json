@@ -12,6 +12,7 @@
     "axp": "cd android && ./gradlew app:assembleRelease",
     "ainstall": "cd android/app/build/outputs/apk/release && adb install app-release.apk",
     "oxc": "cd ios && open Bplus_Executive_V2.xcworkspace",
+<<<<<<< Updated upstream
     "postinstall": "react-native setup-ios-permissions && pod-install && patch-package",
     "reactNativePermissionsIOS": [
       "Camera"
@@ -19,6 +20,12 @@
   },
   "dependencies": {
     "@blacksakura013/th-datepicker": "^1.0.18",
+=======
+    "postinstall": "react-native setup-ios-permissions && pod-install && patch-package"
+  },
+  "dependencies": {
+    "@blacksakura013/th-datepicker": "^1.0.17",
+>>>>>>> Stashed changes
     "@eabdullazyanov/react-native-sms-user-consent": "^1.0.10",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -33,6 +40,7 @@
     "@react-navigation/drawer": "^6.1.8",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
+    "@wavedph/react-native-picker-with-modal": "^0.4.0",
     "antd": "^4.16.13",
     "buffer": "^6.0.3",
     "cordova-plugin-qrscanner": "^3.0.1",
